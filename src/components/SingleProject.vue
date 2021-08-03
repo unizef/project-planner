@@ -34,6 +34,9 @@ export default {
   methods: {
     deleteProject() {
       fetch(this.uri, { method: "DELETE" });
+      then(() => {
+        this.$emit("delete", this.project.id);
+      });
     },
   },
 };
