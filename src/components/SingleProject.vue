@@ -1,5 +1,5 @@
 <template>
-  <div class="project">
+  <div class="project" :class="{ completed: project.completed }">
     <div class="actions">
       <h3 @click="showDetails = !showDetails">
         {{ project.title }}
@@ -11,7 +11,7 @@
         <span @click="deleteProject" class="material-icons">
           delete
         </span>
-        <span @click="toggleComplete" class="material-icons">
+        <span @click="toggleComplete" class="material-icons tick">
           done
         </span>
       </div>
@@ -43,7 +43,11 @@ export default {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ completed: !this.project.completed }),
-      });
+      })
+        .then(() => {
+          this.$emit("complete", this.project.id);
+        })
+        .catch((err) => console.log(err));
     },
   },
 };
@@ -78,5 +82,13 @@ h3 {
 
 .material-icons:hover {
   color: #777;
+}
+
+.project.completed {
+  border-left: 4px solid #00ce89;
+}
+
+.project.completed .tick {
+  color: #00ce89;
 }
 </style>
