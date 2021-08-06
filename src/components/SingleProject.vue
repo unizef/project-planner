@@ -11,7 +11,7 @@
         <span @click="deleteProject" class="material-icons">
           delete
         </span>
-        <span class="material-icons">
+        <span @click="toggleComplete" class="material-icons">
           done
         </span>
       </div>
@@ -36,6 +36,13 @@ export default {
       fetch(this.uri, { method: "DELETE" });
       then(() => {
         this.$emit("delete", this.project.id);
+      });
+    },
+    toggleComplete() {
+      fetch(this.uri, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ completed: !this.project.completed }),
       });
     },
   },
