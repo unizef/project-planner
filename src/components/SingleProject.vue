@@ -42,7 +42,9 @@ export default {
       fetch(this.uri, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ completed: !this.project.completed }),
+        body: JSON.stringify({
+          completed: !this.project.completed,
+        }),
       })
         .then(() => {
           this.$emit("complete", this.project.id);

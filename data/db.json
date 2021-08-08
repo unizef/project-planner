@@ -4,24 +4,24 @@
       "id": 1,
       "title": "Patch tire racebike",
       "details": "lorem ipsum",
-      "completed": false
+      "completed": true
     },
     {
       "id": 2,
       "title": "Maternity visit cousin",
       "details": "lorem ipsum",
-      "completed": false
+      "completed": true
     },
     {
       "id": 3,
       "title": "Pickup parcel from service point",
-      "details": "lorem ipsum",
+      "details": "jaja het is weer feest",
       "completed": false
     },
     {
       "id": 4,
       "title": "Complete online order",
-      "details": "lorem ipsum",
+      "details": "jaja het is weer feest",
       "completed": false
     }
   ]
