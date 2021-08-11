@@ -15,9 +15,9 @@
           done
         </span>
       </div>
-      <div v-if="showDetails" class="details">
-        <p>{{ project.details }}</p>
-      </div>
+    </div>
+    <div v-if="showDetails" class="details">
+      <p>{{ project.details }}</p>
     </div>
   </div>
 </template>

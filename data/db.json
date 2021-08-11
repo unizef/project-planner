@@ -19,10 +19,10 @@
       "completed": false
     },
     {
-      "id": 4,
-      "title": "Complete online order",
-      "details": "jaja het is weer feest",
-      "completed": false
+      "title": "Make pancakes",
+      "details": "Salmon, red bell peppers, leek, cream, tarragon, pepper and salt",
+      "completed": false,
+      "id": 4
     }
   ]
 }
