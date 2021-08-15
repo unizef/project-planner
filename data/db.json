@@ -3,13 +3,13 @@
     {
       "id": 1,
       "title": "Patch tire racebike",
-      "details": "lorem ipsum",
+      "details": "lorem ipsum lorem ipsum",
       "completed": true
     },
     {
       "id": 2,
-      "title": "Keuken ontwerpen",
-      "details": "120cm ",
+      "title": "Keuken ontwerpen Aalsterweg",
+      "details": "120cm, koelkast",
       "completed": true
     },
     {

@@ -18,6 +18,14 @@ export default {
       uri: "http://localhost:3000/projects/" + this.id,
     };
   },
+  mounted() {
+    fetch(this.uri)
+      .then((res) => res.json())
+      .then((data) => {
+        this.title = data.title;
+        this.details = data.details;
+      });
+  },
   methods: {
     handleSubmit() {
       fetch(this.uri, {
@@ -31,14 +39,6 @@ export default {
         .then(() => this.$router.push("/"))
         .catch((e) => console.log(e));
     },
-  },
-  mounted() {
-    fetch(this.uri)
-      .then((res) => res.json())
-      .then((data) => {
-        this.title = data.title;
-        this.details = data.details;
-      });
   },
 };
 </script>
